@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:App1.ViewModels"
+             x:Class="App1.MainPage"
+             x:DataType="viewmodels:MainPageViewModel">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainPageViewModel>
+            
+        </viewmodels:MainPageViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout BackgroundColor="Black">
+        
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="40">
+            <Label Text="Mät dina hopp" HorizontalTextAlignment="Center" TextColor="AntiqueWhite" FontSize="36"/>
+        </Frame>
+
+
+
+        <Label TextColor="WhiteSmoke" Text="{Binding Stopwatch}" FontSize="45" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"></Label>
+        <Label TextColor="WhiteSmoke" Text="{Binding FtHeight}" FontSize="45" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" ></Label>
+        <Label TextColor="WhiteSmoke" Text="{Binding MeterHeight}" FontSize="45" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" ></Label>
+        <Button Command="{Binding StartWatch}" VerticalOptions="EndAndExpand" FontSize="24" Text="Start"></Button>
+        <Button Command="{Binding PauseWatch}" FontSize="24" Text="Stop"></Button>
+        <Button Command="{Binding ResetWatch}" FontSize="24" Text="Reset"></Button>
+
+    </StackLayout>
+    
+
+</ContentPage>
